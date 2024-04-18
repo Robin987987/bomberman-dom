@@ -1,0 +1,198 @@
+* {
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  backdrop-filter: hue-rotate(270deg);
+  background-image: url("https://wallpapercave.com/wp/wp3311326.jpg");
+  width: 100vw;
+  height: 100vh;
+}
+
+.screen {
+  margin: 0px auto;
+  padding: 0px 200px;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.game {
+  display: grid;
+}
+
+/*-------------------GAME SCREEN STUFF----------------------------*/
+.gameScreen {
+  display: flex;
+  position: relative;
+  background-color: rgb(56, 135, 0);
+}
+
+.tile {
+  box-sizing: border-box;
+}
+
+.wall {
+  background: url("../assets/Sprites.png") -96px -96px;
+  filter: hue-rotate(180deg);
+}
+
+.breakable-wall {
+  background: url("../assets/Sprites.png") -128px -96px;
+}
+
+.space {
+  background-color: green;
+  background: url("../assets/Sprites.png") -160px -160px;
+}
+
+.player {
+  background-color: rgb(255, 255, 0);
+  position: absolute;
+  background: url("../assets/Sprites.png") 0px 0px;
+  z-index: 10;
+  filter: hue-rotate(0deg);
+}
+
+.enemy {
+  background-color: rgb(255, 255, 0);
+  position: absolute;
+  background: url("../assets/Sprites.png") 0px 0px;
+  filter: hue-rotate(150deg);
+  z-index: 10;
+}
+
+.bomb {
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  background: url("../assets/Sprites.png") 0px -96px;
+}
+
+.explode {
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  background: url("../assets/Sprites.png") -32px -96px;
+}
+
+/* ------------------SCORE DISPLAY STUFF-----------------------------*/
+.scoreDisplay {
+  background-color: red;
+  width: 10vh;
+  height: 100px;
+}
+
+/* -------------------INSTRUCTION STUFF-------------------------------*/
+
+.instructions {
+  width: auto;
+  height: 75px;
+  background-color: rgb(176, 176, 176);
+  display: flex;
+  /* border: 4px solid black; */
+  /* backdrop-filter: blur(2px); */
+  padding: 10px;
+}
+
+.instructions div {
+  margin-right: 20px;
+}
+.instructions div img {
+  width: 70px;
+}
+
+.instructions div p {
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------------HUD STUFF-------------------------------*/
+
+.hud {
+  width: auto;
+  background-color: rgb(176, 176, 176);
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 10px;
+}
+
+.lifeBoard {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: relative;
+}
+
+.lifeBoard img {
+  margin: 0;
+  padding: 0;
+  height: 24px;
+  transform: scale(2);
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+
+/* -------------------MENU STUFF-------------------------------*/
+.menu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1000;
+
+  margin: 0 auto;
+  display: none;
+
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.menu .message {
+  color: white;
+  margin: 0 auto;
+}
+
+.menu button {
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin: 0px auto;
+}
+
+.menu button:hover {
+  background-color: aliceblue;
+}
+
+.menu ul {
+  list-style-type: none;
+}
+
+.menu ul li {
+  color: white;
+}
+
+.menu .logo {
+  padding: 30px;
+}
+
+/* -------------------SCOREBOARD STUFF-------------------------------*/
+
+.scoreBoard {
+  width: 400px;
+  height: auto;
+  background-color: rgb(176, 176, 176);
+  
+}
+
+
+
