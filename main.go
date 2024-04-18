@@ -1,7 +1,7 @@
 package main
 
 import (
-	api "bomberman/src/api"
+	api "bomberman/src"
 )
 
 const port = ":8080"
